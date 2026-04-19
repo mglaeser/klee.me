@@ -1,0 +1,43 @@
+{
+  "ui": {
+    "skyTitleMain": "Klee",
+    "skyTitleSub": "Familie",
+    "showHud": 0,
+    "footerTextHtml": ""
+  },
+  "tuning": {
+    "bladeDiv": 6.4,
+    "cloverDiv": 55,
+    "minBlades": 180,
+    "maxBlades": 280,
+    "minClovers": 4,
+    "maxClovers": 4,
+    "cloverGapPercent": 0.25,
+    "fourLeafChance": 0.5,
+    "growSlowMax": 6,
+    "grassGrowFactor": 4,
+    "grassHeightMin": 6,
+    "grassHeightMax": 60,
+    "grassTallChance": 0.01,
+    "grassMidChance": 0.05,
+    "windStrengthDeg": 10,
+    "windStrengthSmallDeg": 6,
+    "windSmoothing": 0.02,
+    "starDensityDiv": 2000,
+    "starMin": 70,
+    "starMax": 240,
+    "starTwinkleMin": 3.6,
+    "starTwinkleMax": 5.8
+  },
+  "presetClovers": [
+    {
+      "id": 1,
+      "enabled": 1,
+      "size": "small",
+      "leaves": 4,
+      "color": "#0072b1",
+      "title": "Marian Klee",
+      "url": "https://www.linkedin.com/in/mglaeser/"
+    }
+  ]
+}
