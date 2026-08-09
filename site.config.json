@@ -38,6 +38,14 @@
       "color": "#0072b1",
       "title": "Marian Klee",
       "url": "https://www.linkedin.com/in/mglaeser/"
+    },{
+      "id": 2,
+      "enabled": 1,
+      "size": "small",
+      "leaves": 4,
+      "color": "#8ccfc6",
+      "title": "gourmetcompass.de",
+      "url": "https://gourmetcompass.de/"
     }
   ]
 }
