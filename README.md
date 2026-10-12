@@ -21,3 +21,5 @@ The northern lights in `assets/aurora.js` use one small canvas: layered green cu
 `index.html` is the page, `assets/` contains its styling and animation, and `site.config.json` supplies its content. `CNAME` connects the published site to **klee.me**.
 
 The repository is the ready-to-host static site. Publish its root through GitHub Pages or another static host; no build step or application server is needed. Keep the configuration and assets beside the page, and serve it from the domain root.
+
+When publishing changed CSS or JavaScript, update the shared `v` value in the asset URLs in `index.html` and the aurora import. Cloudflare caches these files for four hours; versioned URLs keep a release’s styles and scripts together without requiring visitors to clear their cache.
