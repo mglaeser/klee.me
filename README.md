@@ -14,6 +14,8 @@ A meadow of clover beneath a starry sky, with a little movement in the grass. Th
 
 The leaf silhouette and its delicate shading are inline SVGs in the stylesheet. Their neutral highlights and shadows let each clover keep its own colour.
 
+The northern lights in `assets/aurora.js` use one small canvas: layered green curtains, fine rays and slow folds. Moving the pointer or touching the sky gently bends and brightens a nearby section; a press adds a soft swell. They remain quietly active at rest, become a still image with reduced motion, and pause drawing while the tab is hidden. The canvas resolution and frame rate are capped, with fewer rays on touch devices; no graphics library or image downloads are needed.
+
 ## At home here
 
 `index.html` is the page, `assets/` contains its styling and animation, and `site.config.json` supplies its content. `CNAME` connects the published site to **klee.me**.
