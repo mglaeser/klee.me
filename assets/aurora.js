@@ -34,10 +34,12 @@ export function createAurora(parent) {
     ctx.clearRect(0, 0, width, height);
     ctx.globalCompositeOperation = "screen";
     const samples = coarse.matches ? 180 : 300;
-    for (let layer = 0; layer < 3; layer++) {
+    // One full curtain and one half-width companion: about half the previous rays.
+    for (let layer = 1; layer < 3; layer++) {
       const phase = time * (0.13 + layer * 0.018) + layer * 2.3;
-      for (let i = 0; i <= samples; i++) {
-        const u = i / samples;
+      const count = layer === 1 ? samples : samples / 2;
+      for (let i = 0; i <= count; i++) {
+        const u = (layer === 1 ? 0 : 0.42) + i / samples;
         const distance = (u - pointerX) / 0.23;
         const near = Math.exp(-distance * distance) * influence;
         const fold = Math.sin(u * 9 + phase) * 0.065
@@ -49,7 +51,7 @@ export function createAurora(parent) {
           + near * (pointerY - 0.4) * 0.13) * height;
         const length = (0.22 + 0.07 * Math.sin(u * 6 + phase)
           + 0.06 * Math.sin(u * 17 - phase) ** 2) * height;
-        const taper = Math.sin(Math.PI * u) ** 0.6;
+        const taper = Math.sin(Math.PI * i / count) ** 0.6;
         const filaments = 0.58 + 0.42 * Math.sin(u * 173 + Math.sin(u * 31 + phase) * 2) ** 2;
         const shimmer = 0.85 + 0.15 * Math.sin(u * 23 + phase * 1.5);
         const brightness = (layer === 1 ? 0.74 : 0.36) * taper * filaments * shimmer;
